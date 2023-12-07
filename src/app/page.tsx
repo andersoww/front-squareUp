@@ -1,113 +1,243 @@
-import Image from 'next/image'
+import { CardQuestion } from "@/components/CardQuestion";
+import { CardServices } from "@/components/CardServices";
+import { CollapsibleRoot } from "@/components/Collapsible/CollapsibleRoot";
+import { Section } from "@/components/Section";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col pt-[100px] bg-Grey-10 h-full scroll-smooth">
+      <Section className="h-[600px]" id="Home">
+        <div className="bg-[url('/hero.svg')] absolute w-full h-full z-10" />
+        <div className="bg-[url('/abstract.svg')] absolute w-full h-[400px] bottom-0 bg-no-repeat left-0 bg-center z-10" />
+        <div className="flex flex-col gap-4 items-center z-30 w-full px-9">
+          <h1 className="font-bold text-5xl text-center max-sm:text-3xl max-w-[570px] max-sm:w-full">
+            A Digital Product Studio that will Work
+          </h1>
+
+          <div className="flex py-4 px-4 border border-Grey-15 rounded-lg mt-4 bg-[#242424] bg-opacity-60">
+            <div className="flex items-center max-sm:hidden">
+              <p className="text-lg text-Grey-60 px-2">For</p>
+              <p className="px-3 py-2 bg-Grey-15 rounded-lg text-lg font-light">
+                Startups
+              </p>
+              <p className="px-2">,</p>
+              <p className="px-3 py-2 bg-Grey-15 rounded-lg text-lg font-light">
+                Enterprise leaders
+              </p>
+              <p className="px-2">,</p>
+              <p className="px-3 py-2 bg-Grey-15 rounded-lg text-lg font-light">
+                Media & Publishers
+              </p>
+              <p className="text-lg text-Grey-60 px-2">and</p>
+              <p className="px-3 py-2 bg-Grey-15 rounded-lg text-lg font-light">
+                Social Good
+              </p>
+            </div>
+
+            <p className="text-Grey-60 text-center hidden max-sm:flex leading-relaxed">
+              For startups, enterprise leaders, media & publishers, and social
+              good.
+            </p>
+          </div>
+
+          <div className="flex w-full justify-center gap-4 mt-5">
+            <button className="py-4 px-3 rounded-md text-white text-sm font-medium border border-Grey-20 border-solid bg-[#242424] bg-opacity-60">
+              Our Works
+            </button>
+
+            <button className="bg-Green-50 py-4 px-3 rounded-md text-Grey-15 text-sm font-medium">
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>
+      </Section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Section id="Companies">
+        <div className="bg-Grey-10 border border-Grey-15 px-6 py-3.5 absolute rounded-3xl -top-7 z-30">
+          <p>Trusted By 250+ Companies</p>
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <ul className="grid grid-cols-6 items-center place-items-center py-8 gap-8 max-sm:gap-0 w-full max-sm:p-0">
+          {[
+            "/brands/zapier.svg",
+            "/brands/spotify.svg",
+            "/brands/zoom.svg",
+            "/brands/slack.svg",
+            "/brands/amazon.svg",
+            "/brands/adobe.svg",
+          ].map((item, index) => {
+            return (
+              <li
+                key={index}
+                className="max-sm:col-span-3 w-full flex justify-center p-8 max-sm:border max-sm:border-Grey-15 max-sm:border-t-0 h-full"
+              >
+                <Image src={item} alt="" width={150} height={50} />
+              </li>
+            );
+          })}
+        </ul>
+      </Section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <Section id="Services" className="h-full">
+        <div className="h-[280px] w-full bg-[#ACFF24] bg-opacity-20 relative">
+          <div className="flex flex-col gap-4 justify-center items-center h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <h1 className="font-semibold text-4xl text-center">Our Services</h1>
+            <p className="text-center">
+              Transform your brand with our innovative digital solutions that
+              captivate and engage your audience.
+            </p>
+          </div>
+          <Image
+            src="/bg-service.svg"
+            alt=""
+            width={1200}
+            height={280}
+            className="w-full absolute h-full blend-mode-multiply z-10 top-0 object-cover"
+          />
+          <div className="bg-[url('/hero.svg')] absolute w-full h-full" />
+        </div>
+        <div className="w-full flex-col flex h-full">
+          <div className="grid grid-cols-3 h-full w-full">
+            <CardServices />
+            <CardServices />
+            <CardServices />
+          </div>
+        </div>
+      </Section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <Section id="Services" className="h-full">
+        <div className="h-[280px] w-full bg-[#ACFF24] bg-opacity-20 relative">
+          <div className="flex flex-col gap-4 justify-center items-center h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <h1 className="font-semibold text-4xl text-center">
+              Why Choose SquareUp?
+            </h1>
+            <p className="text-center">
+              Transform your brand with our innovative digital solutions that
+              captivate and engage your audience.
+            </p>
+          </div>
+          <Image
+            src="/bg-service.svg"
+            alt=""
+            width={1200}
+            height={280}
+            className="w-full absolute h-full blend-mode-multiply z-10 top-0 object-cover"
+          />
+          <div className="bg-[url('/hero.svg')] absolute w-full h-full" />
+        </div>
+        <div className="w-full flex-col flex h-full">
+          <div className="grid grid-cols-2 h-full w-full">
+            <CardServices />
+            <CardServices />
+            <CardServices />
+            <CardServices />
+          </div>
+        </div>
+      </Section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <Section id="Question" className="h-full">
+        <div className="h-[280px] w-full bg-[#ACFF24] bg-opacity-20 relative">
+          <div className="flex flex-col gap-4 justify-center items-center h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <h1 className="font-semibold text-4xl text-center">
+              Why Choose SquareUp?
+            </h1>
+            <p className="text-center">
+              Transform your brand with our innovative digital solutions that
+              captivate and engage your audience.
+            </p>
+          </div>
+          <Image
+            src="/bg-service.svg"
+            alt=""
+            width={1200}
+            height={280}
+            className="w-full absolute h-full blend-mode-multiply z-10 top-0 object-cover"
+          />
+          <div className="bg-[url('/hero.svg')] absolute w-full h-full" />
+        </div>
+        <div className="w-full flex-col flex h-full">
+          <div className="grid grid-cols-2 h-full w-full">
+            <CardServices />
+            <CardServices />
+            <CardServices />
+            <CardServices />
+          </div>
+        </div>
+      </Section>
+
+      <Section id="Services" className="h-full">
+        <div className="h-[280px] w-full bg-[#ACFF24] bg-opacity-20 relative">
+          <div className="flex flex-col gap-4 justify-center items-center h-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+            <h1 className="font-semibold text-4xl text-center">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-center">
+              Still you have any questions? Contact our Team via
+              hello@squareup.com
+            </p>
+          </div>
+          <Image
+            src="/bg-service.svg"
+            alt=""
+            width={1200}
+            height={280}
+            className="w-full absolute h-full blend-mode-multiply z-10 top-0 object-cover"
+          />
+          <div className="bg-[url('/hero.svg')] absolute w-full h-full" />
+        </div>
+
+        <div className="flex max-md:flex-col">
+          <div className="flex flex-col w-full h-full">
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="01"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="02"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="03"
+            />
+            <CardQuestion
+              question="What services does SquareUp provide?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="04"
+            />
+            <CardQuestion
+              question="Do you offer ongoing support and maintenance after the project is completed?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="05"
+            />
+          </div>
+          <div className="flex flex-col w-full h-full">
+            <CardQuestion
+              question="Do you offer ongoing support and maintenance after the project is completed?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="06"
+            />
+            <CardQuestion
+              question="Do you offer ongoing support and maintenance after the project is completed?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="07"
+            />
+            <CardQuestion
+              question="Do you offer ongoing support and maintenance after the project is completed?"
+              reply="SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+              count="08"
+            />
+          </div>
+        </div>
+      </Section>
+
+      <footer>
+        <div></div>
+      </footer>
     </main>
-  )
+  );
 }
