@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/Button";
 import clsx from "clsx";
 import Image from "next/image";
 
@@ -69,9 +70,7 @@ function NavBar() {
               <line x1="4" x2="20" y1="18" y2="18" />
             </svg>
           </button>
-          <button className="bg-Green-50 py-4 px-3 rounded-md text-Grey-15 text-sm font-medium max-md:hidden">
-            Contact
-          </button>
+          <Button variants="primary">Contact</Button>
         </div>
       </div>
     </header>

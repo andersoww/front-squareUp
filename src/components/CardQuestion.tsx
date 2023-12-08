@@ -46,7 +46,10 @@ function Plus({ className }: { className?: string }) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={clsx("lucide lucide-plus hover:cursor-pointer", className)}
+      className={clsx(
+        "lucide lucide-plus hover:cursor-pointer stroke-white",
+        className
+      )}
     >
       <path d="M5 12h14" />
       <path d="M12 5v14" />
@@ -66,9 +69,9 @@ function CardQuestion({ question, reply, count }: CardQuestionProps) {
     >
       <div
         className={clsx(
-          "border p-5 border-Grey-15 w-[70px] h-[70px] duration-500 rounded-2xl flex justify-center items-center card-icon text-2xl font-semibold",
+          "border p-5 text-white border-Grey-15 w-[70px] h-[70px] duration-500 rounded-2xl flex justify-center items-center card-icon text-2xl font-semibold",
           {
-            "text-Green-50 -translate-y-1/2": isOpen,
+            "!text-Green-50 -translate-y-1/2": isOpen,
           }
         )}
       >
@@ -104,7 +107,7 @@ function CardQuestion({ question, reply, count }: CardQuestionProps) {
             }
           )}
         >
-          {reply}
+          <p>{reply}</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
+import { Button } from "@/components/Button";
 import { CardQuestion } from "@/components/CardQuestion";
 import { CardServices } from "@/components/CardServices";
-import { CollapsibleRoot } from "@/components/Collapsible/CollapsibleRoot";
 import { Section } from "@/components/Section";
 import Image from "next/image";
 
@@ -42,13 +42,9 @@ export default function Home() {
           </div>
 
           <div className="flex w-full justify-center gap-4 mt-5">
-            <button className="py-4 px-3 rounded-md text-white text-sm font-medium border border-Grey-20 border-solid bg-[#242424] bg-opacity-60">
-              Our Works
-            </button>
+            <Button variants="secondary"> Our Works</Button>
 
-            <button className="bg-Green-50 py-4 px-3 rounded-md text-Grey-15 text-sm font-medium">
-              Contact Us
-            </button>
+            <Button variants="primary">Contact Us</Button>
           </div>
         </div>
       </Section>
