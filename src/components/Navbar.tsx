@@ -1,31 +1,11 @@
 "use client";
 
 import { Button } from "@/components/Button";
+import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 import Image from "next/image";
 
 function NavBar() {
-  const handleSmoothScroll = (e: any) => {
-    e.preventDefault();
-
-    const targetId = e.currentTarget.getAttribute("href").substring(1);
-    const targetElement = document.getElementById(targetId);
-
-    const sections: any = {
-      Home: targetElement?.offsetTop! - 100,
-      Services: targetElement?.offsetTop! - 100,
-    };
-
-    if (targetElement) {
-      const offsetTop = sections[targetId];
-
-      window.scrollTo({
-        top: offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
   return (
     <header className="w-full fixed top-0 border-b border-Grey-15 z-50 bg-Grey-10">
       <div className={clsx("flex justify-center w-full px-4")}>
@@ -44,7 +24,7 @@ function NavBar() {
                   key={index}
                   className="text-Grey-90 font-medium text-sm hover:bg-Grey-15 p-3 rounded-md hover:cursor-pointer first:bg-Grey-15"
                 >
-                  <a href={`#${item}`} onClick={handleSmoothScroll}>
+                  <a href={`#${item}`} onClick={SmoothScroll}>
                     {item}
                   </a>
                 </li>
