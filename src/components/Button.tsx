@@ -19,7 +19,8 @@ function Button({ className, variants, children, ...rest }: ButtonProps) {
           "bg-Green-50 text-Grey-15": variants === "primary",
           "text-white border border-Grey-20 border-solid bg-[#242424] bg-opacity-60":
             variants === "secondary",
-        }
+        },
+        className
       )}
       onClick={(event) => {
         const btn = event.currentTarget;

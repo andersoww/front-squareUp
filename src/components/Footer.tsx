@@ -12,7 +12,7 @@ function Footer() {
           "flex justify-center w-full px-4 items-center flex-col gap-10 py-8"
         )}
       >
-        <div className="flex justify-between w-full max-w-7xl items-center max-lg:flex-col max-lg:gap-4">
+        <div className="flex justify-between w-full max-w-7xl items-center max-lg:flex-col max-lg:gap-20">
           <Image
             src="/logoSquare.svg"
             alt="Logo Square"

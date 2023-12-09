@@ -50,7 +50,9 @@ function NavBar() {
               <line x1="4" x2="20" y1="18" y2="18" />
             </svg>
           </button>
-          <Button variants="primary">Contact</Button>
+          <Button className="max-md:hidden" variants="primary">
+            Contact
+          </Button>
         </div>
       </div>
     </header>
