@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/Button";
+import ReactPopover from "@/components/PopOver";
 import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 import Image from "next/image";
@@ -32,24 +33,27 @@ function NavBar() {
             )}
           </ul>
 
-          <button className="w-12 h-12 bg-Grey-15 rounded-md max-md:flex hidden max-md:items-center max-md:justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="lucide lucide-menu stroke-Green-80"
-            >
-              <line x1="4" x2="20" y1="12" y2="12" />
-              <line x1="4" x2="20" y1="6" y2="6" />
-              <line x1="4" x2="20" y1="18" y2="18" />
-            </svg>
-          </button>
+          <ReactPopover trigger="click">
+            <button className="w-12 h-12 bg-Grey-15 rounded-md max-md:flex hidden max-md:items-center max-md:justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-menu stroke-Green-80"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </button>
+          </ReactPopover>
+
           <Button className="max-md:hidden" variants="primary">
             Contact
           </Button>

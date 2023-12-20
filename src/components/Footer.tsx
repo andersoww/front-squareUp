@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/Button";
 import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 import Image from "next/image";
