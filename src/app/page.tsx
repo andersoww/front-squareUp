@@ -1,7 +1,6 @@
 import { Button } from "@/components/Button";
 import { CardQuestion } from "@/components/CardQuestion";
 import { CardServices } from "@/components/CardServices";
-import ReactPopover from "@/components/PopOver";
 import { Section } from "@/components/Section";
 import Image from "next/image";
 
@@ -231,10 +230,6 @@ export default function Home() {
           </div>
         </div>
       </Section>
-
-      <footer>
-        <div></div>
-      </footer>
     </main>
   );
 }

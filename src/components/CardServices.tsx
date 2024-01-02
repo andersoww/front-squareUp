@@ -1,3 +1,4 @@
+import { EffectRipple } from "@/components/Effects";
 import clsx from "clsx";
 import { HTMLAttributes, ReactNode } from "react";
 
@@ -42,10 +43,11 @@ function CardServices({ className, ...rest }: CardServicesProps) {
           about creating seamless and intuitive user experiences.
         </p>
       </div>
-
-      <button className="w-full py-3.5 font-medium text-sm bg-Grey-15 rounded-md">
-        Learn More
-      </button>
+      <EffectRipple>
+        <button className="w-full py-3.5 font-medium text-sm bg-Grey-15 rounded-md">
+          Learn More
+        </button>
+      </EffectRipple>
     </div>
   );
 }
