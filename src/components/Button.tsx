@@ -10,7 +10,7 @@ interface ButtonProps extends HTMLAttributes<HTMLElement> {
 
 function Button({ className, variants, children, ...rest }: ButtonProps) {
   return (
-    <EffectRipple>
+    <EffectRipple className={className}>
       <button
         type="button"
         className={clsx(
@@ -19,8 +19,7 @@ function Button({ className, variants, children, ...rest }: ButtonProps) {
             "bg-Green-50 text-Grey-15": variants === "primary",
             "text-white border border-Grey-20 border-solid bg-[#242424] bg-opacity-60":
               variants === "secondary",
-          },
-          className
+          }
         )}
         {...rest}
       >
