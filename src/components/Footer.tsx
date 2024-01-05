@@ -1,9 +1,16 @@
 "use client";
+import { MenuItem } from "@/components/MenuItem";
 import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 import Image from "next/image";
 
-function Footer() {
+function Footer({
+  status,
+  handleStatus,
+}: {
+  status: string;
+  handleStatus: (value: string) => void;
+}) {
   return (
     <footer className="w-full bg-Grey-10">
       <div
@@ -20,20 +27,11 @@ function Footer() {
             className=" max-md:w-40"
           />
 
-          <ul className="gap-4 flex flex-wrap justify-center">
-            {["Home", "Services", "Work", "Process", "About", "Careers"].map(
-              (item, index) => (
-                <li
-                  key={index}
-                  className="text-Grey-90 font-medium text-sm hover:bg-Grey-15 p-3 rounded-md hover:cursor-pointer first:bg-Grey-15"
-                >
-                  <a href={`#${item}`} onClick={SmoothScroll}>
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
+          <MenuItem
+            className="gap-4 flex flex-wrap justify-center"
+            status={status}
+            handleStatus={handleStatus}
+          />
 
           <div className="flex gap-4 border border-Grey-15 p-4 rounded-lg w-fit items-center max-md: flex-col max-md:w-full max-md:py-4 max-md:px-2.5">
             <p>Stay Connected</p>

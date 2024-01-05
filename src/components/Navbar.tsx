@@ -1,12 +1,18 @@
 "use client";
 
 import { Button } from "@/components/Button";
+import { MenuItem } from "@/components/MenuItem";
 import ReactPopover from "@/components/PopOver";
-import { SmoothScroll } from "@/utils/SmoothScroll";
 import clsx from "clsx";
 import Image from "next/image";
 
-function NavBar() {
+function NavBar({
+  status,
+  handleStatus,
+}: {
+  status: string;
+  handleStatus: (value: string) => void;
+}) {
   return (
     <header className="w-full fixed top-0 border-b border-Grey-15 z-50 bg-Grey-10">
       <div className={clsx("flex justify-center w-full px-4")}>
@@ -18,20 +24,11 @@ function NavBar() {
             height={40}
           />
 
-          <ul className="gap-4 flex max-md:hidden">
-            {["Home", "Services", "Work", "Process", "About", "Careers"].map(
-              (item, index) => (
-                <li
-                  key={index}
-                  className="text-Grey-90 font-medium text-sm hover:bg-Grey-15 p-3 rounded-md hover:cursor-pointer first:bg-Grey-15"
-                >
-                  <a href={`#${item}`} onClick={SmoothScroll}>
-                    {item}
-                  </a>
-                </li>
-              )
-            )}
-          </ul>
+          <MenuItem
+            status={status}
+            handleStatus={handleStatus}
+            className="gap-4 flex max-md:hidden"
+          />
 
           <ReactPopover trigger="click">
             <button className="w-12 h-12 bg-Grey-15 rounded-md max-md:flex hidden max-md:items-center max-md:justify-center">
